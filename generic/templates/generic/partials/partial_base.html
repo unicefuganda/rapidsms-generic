@@ -1,3 +1,4 @@
+{% load i18n %}
 <div id="div_results_loading">&nbsp;</div>
 <div id="div_panel_loading">&nbsp;</div>
 {% if results_title %}
@@ -24,7 +25,7 @@
 {% ifequal object_list|length 0 %}
 	<tr>
 		<td></td>
-		<td colspan="{{ columns|length }}"><p>No Results match your search.  Refresh to reset.</p></td>
+		<td colspan="{{ columns|length }}"><p>{% trans "No Results match your search.  Refresh to reset." %}</p></td>
 	</tr>
 {% else %}
     {% block partial_base_content %}
