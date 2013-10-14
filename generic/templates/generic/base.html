@@ -24,7 +24,7 @@
         {% block filters %}
         {% if filter_forms|length > 0 %}
             <div id="filters" class="module">
-                <h2>Filters</h2>
+                <h2>{% trans "Filters" %}</h2>
                         <table>
                 {% for form in filter_forms %}
                     <div class="filterform" id="div_filter_{{ forloop.counter0 }}">
@@ -50,10 +50,10 @@
                 {% endfor %}
                         </table>
                 <div class="filterform" id="div_filter_update">
-                    <a href="javascript:void(0)" onclick="filter(this)" class="btn btn-primary">Update</a>
+                    <a href="javascript:void(0)" onclick="filter(this)" class="btn btn-primary">{% trans "Update" %}</a>
                 </div>
                 <div class="filterform" id="div_filter_clear">
-                    <a href="./" class="btn btn-primary">Clear</a>
+                    <a href="./" class="btn btn-primary">{% trans "Clear" %}</a>
                 </div>
             </div>
             <br/>
