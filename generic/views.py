@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 from generic.models import Dashboard, Module, StaticModuleContent
 from django.views.decorators.cache import cache_control
 from .utils import copy_dashboard, get_dates, set_default_dates, paginate
-
+from django.utils.translation import ugettext as _
 
 def generic_row(request, model=None, pk=None, partial_row='generic/partials/partial_row.html', selectable=True):
     if not (model and pk):
@@ -29,7 +29,7 @@ def generic(request,
             partial_header='generic/partials/partial_header.html',
             partial_row='generic/partials/partial_row.html',
             paginator_template='generic/partials/pagination.html',
-            results_title='Results',
+            results_title=_('Results'),
             paginated=True,
             paginator_func=None,
             selectable=True,
