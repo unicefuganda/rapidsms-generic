@@ -7,7 +7,7 @@
 {% if status_message %}
     <div id="span_status_message" class="status_{{ status_message_type }}">
         {{ status_message }}
-    <a href="javascript:void(0)" onclick="$('#span_status_message').hide();">Dismiss</a>
+    <a href="javascript:void(0)" onclick="$('#span_status_message').hide();">{% trans "Dismiss" %}</a>
     </div>
 
 {% endif %}
